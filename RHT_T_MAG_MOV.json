@@ -24,8 +24,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 640,
-        "y": 380,
+        "x": 880,
+        "y": 400,
         "wires": []
     },
     {
@@ -33,15 +33,15 @@
         "type": "function",
         "z": "a238bb4939441ca7",
         "name": "RHT nazwa",
-        "func": "if (msg.payload.data[0].model === \"ELA_RHT\"){\n    msg.payload = msg.payload.data[0].name;\n} else {\n    return;\n}\nreturn msg;",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_RHT\"){\n        msg.payload = msg.payload.data[0].name;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 380,
+        "x": 670,
+        "y": 400,
         "wires": [
             [
                 "3c0e3499b2f465d9",
@@ -66,8 +66,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 640,
-        "y": 420,
+        "x": 880,
+        "y": 440,
         "wires": []
     },
     {
@@ -75,15 +75,15 @@
         "type": "function",
         "z": "a238bb4939441ca7",
         "name": "RHT temperatura",
-        "func": "if (msg.payload.data[0].model === \"ELA_RHT\"){\n    msg.payload = msg.payload.data[0].charValues.temperature;\n} else {\n    return;\n}\nmsg.topic = \"temperatura\";\nreturn msg;",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_RHT\"){\n        msg.payload = msg.payload.data[0].charValues.temperature;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nmsg.topic = \"temperatura\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
-        "y": 420,
+        "x": 690,
+        "y": 440,
         "wires": [
             [
                 "ae5f87c8f9398a4e",
@@ -110,8 +110,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 630,
-        "y": 460,
+        "x": 870,
+        "y": 480,
         "wires": []
     },
     {
@@ -119,15 +119,15 @@
         "type": "function",
         "z": "a238bb4939441ca7",
         "name": "RHT wilgotnosc",
-        "func": "if (msg.payload.data[0].model === \"ELA_RHT\"){\n    msg.payload = msg.payload.data[0].charValues.humidity;\n} else {\n    return;\n}\nmsg.topic = \"wilgotność\";\nreturn msg;",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_RHT\"){\n        msg.payload = msg.payload.data[0].charValues.humidity;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nmsg.topic = \"wilgotność\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 460,
+        "x": 680,
+        "y": 480,
         "wires": [
             [
                 "516a24c80724c998",
@@ -154,8 +154,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 640,
-        "y": 600,
+        "x": 880,
+        "y": 640,
         "wires": []
     },
     {
@@ -163,15 +163,15 @@
         "type": "function",
         "z": "a238bb4939441ca7",
         "name": "T nazwa",
-        "func": "if (msg.payload.data[0].model === \"ELA_T\"){\n    msg.payload = msg.payload.data[0].name;\n} else {\n    return;\n}\nreturn msg;",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_T\"){\n        msg.payload = msg.payload.data[0].name;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 600,
+        "x": 660,
+        "y": 640,
         "wires": [
             [
                 "577e1a8d7ab67ab2",
@@ -196,8 +196,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 640,
-        "y": 640,
+        "x": 880,
+        "y": 680,
         "wires": []
     },
     {
@@ -205,15 +205,15 @@
         "type": "function",
         "z": "a238bb4939441ca7",
         "name": "T temperatura",
-        "func": "if (msg.payload.data[0].model === \"ELA_T\"){\n    msg.payload = msg.payload.data[0].charValues.temperature;\n} else {\n    return;\n}\nmsg.topic = \"Temperatura\";\nreturn msg;",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_T\"){\n        msg.payload = msg.payload.data[0].charValues.temperature;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nmsg.topic = \"Temperatura\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 640,
+        "x": 680,
+        "y": 680,
         "wires": [
             [
                 "5da040886deb3f09",
@@ -240,8 +240,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 660,
-        "y": 800,
+        "x": 900,
+        "y": 860,
         "wires": []
     },
     {
@@ -249,15 +249,15 @@
         "type": "function",
         "z": "a238bb4939441ca7",
         "name": "MAG nazwa",
-        "func": "if (msg.payload.data[0].model === \"ELA_MAG\"){\n    msg.payload = msg.payload.data[0].name;\n} else {\n    return;\n}\nreturn msg;",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_MAG\"){\n        msg.payload = msg.payload.data[0].name;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 800,
+        "x": 710,
+        "y": 860,
         "wires": [
             [
                 "eb9d160c105da51a",
@@ -282,8 +282,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 630,
-        "y": 840,
+        "x": 870,
+        "y": 900,
         "wires": []
     },
     {
@@ -291,15 +291,15 @@
         "type": "function",
         "z": "a238bb4939441ca7",
         "name": "MAG state",
-        "func": "if (msg.payload.data[0].model === \"ELA_MAG\"){\n    msg.payload = msg.payload.data[0].charValues.alertLevel.state;\n} else {\n    return;\n}\nmsg.topic = \"stan\";\nreturn msg;",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_MAG\"){\n        if (msg.payload.data[0].mfrValues === undefined){\n            msg.payload = msg.payload.data[0].charValues.alertLevel.state;\n        } else {\n            return;\n        }      \n    } else {\n        return;\n    }\n} else {\n    return;\n}\nmsg.topic = \"stan\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 840,
+        "x": 710,
+        "y": 900,
         "wires": [
             [
                 "898af902e7d38332",
@@ -326,8 +326,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 640,
-        "y": 880,
+        "x": 880,
+        "y": 940,
         "wires": []
     },
     {
@@ -335,15 +335,15 @@
         "type": "function",
         "z": "a238bb4939441ca7",
         "name": "MAG count",
-        "func": "if (msg.payload.data[0].model === \"ELA_MAG\"){\n    msg.payload = msg.payload.data[0].charValues.alertLevel.counter;\n} else {\n    return;\n}\nmsg.topic = \"licznik\";\nreturn msg;",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_MAG\"){\n        if (msg.payload.data[0].mfrValues === undefined){\n            msg.payload = msg.payload.data[0].charValues.alertLevel.counter;\n        } else {\n            return;\n        }      \n    } else {\n        return;\n    }\n} else {\n    return;\n}\nmsg.topic = \"licznik\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 880,
+        "x": 710,
+        "y": 940,
         "wires": [
             [
                 "e208b0f8e5403e54",
@@ -358,15 +358,15 @@
         "type": "function",
         "z": "a238bb4939441ca7",
         "name": "MOV X",
-        "func": "if (msg.payload.data[0].model === \"ELA_MOV\"){\n    msg.payload = msg.payload.data[0].charValues.xAxis;\n} else {\n    return;\n}\nmsg.topic = \"x\";\nreturn msg;",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_MOV\"){\n        msg.payload = msg.payload.data[0].charValues.xAxis;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nmsg.topic = \"x\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 1060,
+        "x": 650,
+        "y": 1160,
         "wires": [
             [
                 "c51360783a9edc2f",
@@ -381,15 +381,15 @@
         "type": "function",
         "z": "a238bb4939441ca7",
         "name": "MOV y",
-        "func": "if (msg.payload.data[0].model === \"ELA_MOV\"){\n    msg.payload = msg.payload.data[0].charValues.yAxis;\n} else {\n    return;\n}\nmsg.topic = \"y\";\nreturn msg;",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_MOV\"){\n        msg.payload = msg.payload.data[0].charValues.yAxis;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nmsg.topic = \"y\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 1100,
+        "x": 650,
+        "y": 1200,
         "wires": [
             [
                 "bc24c1a227ef85d0",
@@ -404,15 +404,15 @@
         "type": "function",
         "z": "a238bb4939441ca7",
         "name": "MOV z",
-        "func": "if (msg.payload.data[0].model === \"ELA_MOV\") {\n    msg.payload = msg.payload.data[0].charValues.zAxis;\n} else {\n    return;\n}\nmsg.topic = \"z\";\nreturn msg;",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_MOV\"){\n        msg.payload = msg.payload.data[0].charValues.zAxis;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nmsg.topic = \"z\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 1140,
+        "x": 650,
+        "y": 1240,
         "wires": [
             [
                 "34d30fc7be4b6c37",
@@ -427,15 +427,15 @@
         "type": "function",
         "z": "a238bb4939441ca7",
         "name": "MOV nazwa",
-        "func": "if (msg.payload.data[0].model === \"ELA_MOV\"){\n    msg.payload = msg.payload.data[0].name;\n} else {\n    return;\n}\nreturn msg;",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_MOV\"){\n        msg.payload = msg.payload.data[0].name;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 1020,
+        "x": 670,
+        "y": 1120,
         "wires": [
             [
                 "a33438cf4701c9d0",
@@ -460,8 +460,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 620,
-        "y": 1020,
+        "x": 860,
+        "y": 1120,
         "wires": []
     },
     {
@@ -481,8 +481,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 590,
-        "y": 1060,
+        "x": 830,
+        "y": 1160,
         "wires": []
     },
     {
@@ -502,8 +502,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 590,
-        "y": 1100,
+        "x": 830,
+        "y": 1200,
         "wires": []
     },
     {
@@ -523,8 +523,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 590,
-        "y": 1140,
+        "x": 830,
+        "y": 1240,
         "wires": []
     },
     {
@@ -565,8 +565,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 790,
-        "y": 420,
+        "x": 1030,
+        "y": 440,
         "wires": [
             []
         ]
@@ -609,8 +609,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 790,
-        "y": 640,
+        "x": 1030,
+        "y": 680,
         "wires": [
             []
         ]
@@ -653,8 +653,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 770,
-        "y": 880,
+        "x": 1010,
+        "y": 940,
         "wires": [
             []
         ]
@@ -697,8 +697,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 730,
-        "y": 1100,
+        "x": 970,
+        "y": 1200,
         "wires": [
             []
         ]
@@ -720,8 +720,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 940,
-        "y": 380,
+        "x": 1180,
+        "y": 400,
         "wires": []
     },
     {
@@ -741,8 +741,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 940,
-        "y": 420,
+        "x": 1180,
+        "y": 440,
         "wires": []
     },
     {
@@ -762,8 +762,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 930,
-        "y": 460,
+        "x": 1170,
+        "y": 480,
         "wires": []
     },
     {
@@ -783,8 +783,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 940,
-        "y": 600,
+        "x": 1180,
+        "y": 640,
         "wires": []
     },
     {
@@ -804,8 +804,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 940,
-        "y": 640,
+        "x": 1180,
+        "y": 680,
         "wires": []
     },
     {
@@ -825,8 +825,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 940,
-        "y": 800,
+        "x": 1180,
+        "y": 860,
         "wires": []
     },
     {
@@ -846,8 +846,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 910,
-        "y": 840,
+        "x": 1150,
+        "y": 900,
         "wires": []
     },
     {
@@ -867,8 +867,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 920,
-        "y": 880,
+        "x": 1160,
+        "y": 940,
         "wires": []
     },
     {
@@ -888,8 +888,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 880,
-        "y": 1020,
+        "x": 1120,
+        "y": 1120,
         "wires": []
     },
     {
@@ -909,8 +909,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 850,
-        "y": 1060,
+        "x": 1090,
+        "y": 1160,
         "wires": []
     },
     {
@@ -930,8 +930,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 850,
-        "y": 1100,
+        "x": 1090,
+        "y": 1200,
         "wires": []
     },
     {
@@ -951,8 +951,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 850,
-        "y": 1140,
+        "x": 1090,
+        "y": 1240,
         "wires": []
     },
     {
@@ -993,8 +993,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1110,
-        "y": 460,
+        "x": 1350,
+        "y": 480,
         "wires": [
             []
         ]
@@ -1037,8 +1037,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1090,
-        "y": 640,
+        "x": 1330,
+        "y": 680,
         "wires": [
             []
         ]
@@ -1081,8 +1081,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1050,
-        "y": 880,
+        "x": 1290,
+        "y": 940,
         "wires": [
             []
         ]
@@ -1125,8 +1125,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 990,
-        "y": 1100,
+        "x": 1230,
+        "y": 1200,
         "wires": [
             []
         ]
@@ -1136,15 +1136,15 @@
         "type": "function",
         "z": "a238bb4939441ca7",
         "name": "RHT rssi",
-        "func": "if (msg.payload.data[0].model === \"ELA_RHT\"){\n    msg.payload = msg.payload.data[0].rssi;\n} else {\n    return;\n}\nreturn msg;",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_RHT\"){\n        msg.payload = msg.payload.data[0].rssi;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 500,
+        "x": 660,
+        "y": 520,
         "wires": [
             [
                 "37bf7ae18f608ca6",
@@ -1157,15 +1157,15 @@
         "type": "function",
         "z": "a238bb4939441ca7",
         "name": "T rssi",
-        "func": "if (msg.payload.data[0].model === \"ELA_T\"){\n    msg.payload = msg.payload.data[0].rssi;\n} else {\n    return;\n}\nreturn msg;",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_T\"){\n        msg.payload = msg.payload.data[0].rssi;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 680,
+        "x": 650,
+        "y": 720,
         "wires": [
             [
                 "455fab1086ea3eac",
@@ -1178,15 +1178,15 @@
         "type": "function",
         "z": "a238bb4939441ca7",
         "name": "MAG rssi",
-        "func": "if (msg.payload.data[0].model === \"ELA_MAG\"){\n    msg.payload = msg.payload.data[0].rssi;\n} else {\n    return;\n}\nreturn msg;",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_MAG\"){\n        msg.payload = msg.payload.data[0].rssi;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 920,
+        "x": 700,
+        "y": 980,
         "wires": [
             [
                 "e2718b040f3f1644",
@@ -1198,16 +1198,16 @@
         "id": "27dcd6ab1f4ef863",
         "type": "function",
         "z": "a238bb4939441ca7",
-        "name": "RHT rssi",
-        "func": "if (msg.payload.data[0].model === \"ELA_MOV\") {\n    msg.payload = msg.payload.data[0].rssi;\n} else {\n    return;\n}\nreturn msg;",
+        "name": "MOV rssi",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_MOV\"){\n        msg.payload = msg.payload.data[0].rssi;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 1180,
+        "x": 660,
+        "y": 1280,
         "wires": [
             [
                 "83b005ee48f5d666",
@@ -1239,8 +1239,8 @@
         "seg2": "-65",
         "diff": false,
         "className": "",
-        "x": 610,
-        "y": 500,
+        "x": 850,
+        "y": 520,
         "wires": []
     },
     {
@@ -1267,8 +1267,8 @@
         "seg2": "-65",
         "diff": false,
         "className": "",
-        "x": 910,
-        "y": 500,
+        "x": 1150,
+        "y": 520,
         "wires": []
     },
     {
@@ -1295,8 +1295,8 @@
         "seg2": "-65",
         "diff": false,
         "className": "",
-        "x": 930,
-        "y": 680,
+        "x": 1170,
+        "y": 720,
         "wires": []
     },
     {
@@ -1323,8 +1323,8 @@
         "seg2": "-65",
         "diff": false,
         "className": "",
-        "x": 930,
-        "y": 920,
+        "x": 1170,
+        "y": 980,
         "wires": []
     },
     {
@@ -1351,8 +1351,8 @@
         "seg2": "-65",
         "diff": false,
         "className": "",
-        "x": 850,
-        "y": 1180,
+        "x": 1090,
+        "y": 1280,
         "wires": []
     },
     {
@@ -1379,8 +1379,8 @@
         "seg2": "-65",
         "diff": false,
         "className": "",
-        "x": 590,
-        "y": 1180,
+        "x": 830,
+        "y": 1280,
         "wires": []
     },
     {
@@ -1407,8 +1407,8 @@
         "seg2": "-65",
         "diff": false,
         "className": "",
-        "x": 670,
-        "y": 920,
+        "x": 910,
+        "y": 980,
         "wires": []
     },
     {
@@ -1435,8 +1435,8 @@
         "seg2": "-65",
         "diff": false,
         "className": "",
-        "x": 650,
-        "y": 680,
+        "x": 890,
+        "y": 720,
         "wires": []
     },
     {
@@ -1463,8 +1463,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 770,
-        "y": 840,
+        "x": 1010,
+        "y": 900,
         "wires": []
     },
     {
@@ -1491,8 +1491,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1050,
-        "y": 840,
+        "x": 1290,
+        "y": 900,
         "wires": []
     },
     {
@@ -1507,8 +1507,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 1260,
+        "x": 530,
+        "y": 1440,
         "wires": [
             [
                 "71595274b321688b",
@@ -1530,8 +1530,8 @@
         "scope": [
             "3ef9920a4de0d976"
         ],
-        "x": 160,
-        "y": 1260,
+        "x": 380,
+        "y": 1440,
         "wires": [
             [
                 "f5530bdfb49d16e9"
@@ -1570,8 +1570,8 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
-        "x": 790,
-        "y": 1280,
+        "x": 1010,
+        "y": 1460,
         "wires": []
     },
     {
@@ -1606,8 +1606,8 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
-        "x": 790,
-        "y": 1240,
+        "x": 1010,
+        "y": 1420,
         "wires": []
     },
     {
@@ -1642,8 +1642,8 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
-        "x": 490,
-        "y": 1240,
+        "x": 710,
+        "y": 1420,
         "wires": []
     },
     {
@@ -1678,8 +1678,8 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
-        "x": 490,
-        "y": 1280,
+        "x": 710,
+        "y": 1460,
         "wires": []
     },
     {
@@ -1714,8 +1714,8 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
-        "x": 630,
-        "y": 1240,
+        "x": 850,
+        "y": 1420,
         "wires": []
     },
     {
@@ -1750,8 +1750,8 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
-        "x": 630,
-        "y": 1280,
+        "x": 850,
+        "y": 1460,
         "wires": []
     },
     {
@@ -1786,8 +1786,8 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
-        "x": 950,
-        "y": 1240,
+        "x": 1170,
+        "y": 1420,
         "wires": []
     },
     {
@@ -1822,8 +1822,8 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
-        "x": 950,
-        "y": 1280,
+        "x": 1170,
+        "y": 1460,
         "wires": []
     },
     {
@@ -1864,8 +1864,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 790,
-        "y": 480,
+        "x": 1030,
+        "y": 500,
         "wires": [
             []
         ]
@@ -1908,8 +1908,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1116,
-        "y": 419,
+        "x": 1356,
+        "y": 439,
         "wires": [
             []
         ]
@@ -1926,8 +1926,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 210,
-        "y": 320,
+        "x": 450,
+        "y": 340,
         "wires": [
             [
                 "37bf7ae18f608ca6",
@@ -1936,8 +1936,9 @@
                 "0ace82ee8ff4a7e4",
                 "5c968884f3117eed",
                 "83b005ee48f5d666",
+                "455fab1086ea3eac",
                 "dd9a09d5b4e6550a",
-                "455fab1086ea3eac"
+                "c5e44805805f6601"
             ]
         ]
     },
@@ -1958,51 +1959,13 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 260,
-        "y": 260,
+        "x": 500,
+        "y": 280,
         "wires": [
             [
                 "92cbb82a516fbfab"
             ]
         ]
-    },
-    {
-        "id": "3ef9920a4de0d976",
-        "type": "mqtt in",
-        "z": "a238bb4939441ca7",
-        "name": "",
-        "topic": "AMC/test",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "038eb83fd0c55fe9",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 171.11666870117188,
-        "y": 646.7166748046875,
-        "wires": [
-            [
-                "a0279382ae9ce241",
-                "eb8d92554f9d897f",
-                "ef4f0bb4f580a4ba",
-                "c832c7d4f03806b0",
-                "4f4805403d675101",
-                "658c4b14598ce7ab",
-                "556a8623e48a6460",
-                "316bf044fa2f70b0",
-                "b27c0b897012eb11",
-                "618ff220d1ff0c5d",
-                "0ef2c08ae5332c9e",
-                "675cea89a8dfa429",
-                "517586b83eb7a79a",
-                "7e80712034bb4f1e",
-                "4cd27caec1b0b4e2",
-                "751f2c2f3b35096b",
-                "27dcd6ab1f4ef863"
-            ]
-        ],
-        "info": "Odbiera wiadomości z tematu 'AMC/test' na serwerze MQTT.\nReceives messages from the topic 'AMC/test' on the MQTT server."
     },
     {
         "id": "a0279382ae9ce241",
@@ -2017,110 +1980,340 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 160,
+        "x": 120,
         "y": 740,
         "wires": [],
         "info": "Służy do debugowania wiadomości.\nUsed for debugging messages."
     },
     {
-        "id": "784082a8ca21d25f",
-        "type": "ui_spacer",
+        "id": "c5e44805805f6601",
+        "type": "function",
         "z": "a238bb4939441ca7",
-        "name": "spacer",
-        "group": "ea1817d2da34bc72",
-        "order": 5,
-        "width": 3,
-        "height": 1
+        "name": "RHT bateria",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_RHT\"){\n        msg.payload = msg.payload.data[0].mfrValues.batteryVoltage;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 560,
+        "wires": [
+            [
+                "cba33d2b32771468",
+                "7229051da6135cc6"
+            ]
+        ]
     },
     {
-        "id": "b6082080403562bd",
-        "type": "ui_spacer",
+        "id": "cba33d2b32771468",
+        "type": "ui_text",
         "z": "a238bb4939441ca7",
-        "name": "spacer",
-        "group": "1ca5563fcbfe4fc4",
-        "order": 7,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "af0cedc23fc36097",
-        "type": "ui_spacer",
-        "z": "a238bb4939441ca7",
-        "name": "spacer",
-        "group": "0deed91a4739f2bc",
-        "order": 7,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "6b8bc672b26d28dc",
-        "type": "ui_spacer",
-        "z": "a238bb4939441ca7",
-        "name": "spacer",
-        "group": "5159dc9ffe43f36f",
-        "order": 2,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "1ef7fe678ac2afbd",
-        "type": "ui_spacer",
-        "z": "a238bb4939441ca7",
-        "name": "spacer",
-        "group": "5159dc9ffe43f36f",
-        "order": 7,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "55279b737a219f04",
-        "type": "ui_spacer",
-        "z": "a238bb4939441ca7",
-        "name": "spacer",
         "group": "5159dc9ffe43f36f",
         "order": 8,
         "width": 3,
-        "height": 1
+        "height": 1,
+        "name": "",
+        "label": "Bateria:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 860,
+        "y": 560,
+        "wires": []
     },
     {
-        "id": "3c0114fbe558ba0d",
-        "type": "ui_spacer",
+        "id": "7229051da6135cc6",
+        "type": "ui_text",
         "z": "a238bb4939441ca7",
-        "name": "spacer",
         "group": "f4e57924918ed1cd",
         "order": 6,
         "width": 3,
-        "height": 1
+        "height": 1,
+        "name": "",
+        "label": "Bateria:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1160,
+        "y": 560,
+        "wires": []
     },
     {
-        "id": "939dc819ecd0b59b",
-        "type": "ui_spacer",
+        "id": "82ef1e6da2f12166",
+        "type": "function",
         "z": "a238bb4939441ca7",
-        "name": "spacer",
+        "name": "T bateria",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_T\"){\n        msg.payload = msg.payload.data[0].mfrValues.batteryVoltage;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 760,
+        "wires": [
+            [
+                "b6f3c07edb9fc68d",
+                "88f65d48e4381a35"
+            ]
+        ]
+    },
+    {
+        "id": "b6f3c07edb9fc68d",
+        "type": "ui_text",
+        "z": "a238bb4939441ca7",
+        "group": "ea1817d2da34bc72",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "Bateria:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 880,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "88f65d48e4381a35",
+        "type": "ui_text",
+        "z": "a238bb4939441ca7",
         "group": "7927da874e043a8f",
         "order": 5,
         "width": 3,
-        "height": 1
+        "height": 1,
+        "name": "",
+        "label": "Bateria:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1140,
+        "y": 760,
+        "wires": []
     },
     {
-        "id": "e8f6af9618981543",
-        "type": "ui_spacer",
+        "id": "67862e71bb7f1787",
+        "type": "function",
         "z": "a238bb4939441ca7",
-        "name": "spacer",
+        "name": "MAG bateria",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_MAG\"){\n        msg.payload = msg.payload.data[0].mfrValues.batteryVoltage;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1020,
+        "wires": [
+            [
+                "b1b5b6395635c740",
+                "debdf591c40d7261"
+            ]
+        ]
+    },
+    {
+        "id": "b1b5b6395635c740",
+        "type": "ui_text",
+        "z": "a238bb4939441ca7",
+        "group": "1ca5563fcbfe4fc4",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "Bateria:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 900,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "debdf591c40d7261",
+        "type": "ui_text",
+        "z": "a238bb4939441ca7",
         "group": "adf7cf7a8df9ad59",
         "order": 7,
         "width": 3,
-        "height": 1
+        "height": 1,
+        "name": "",
+        "label": "Bateria:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1200,
+        "y": 1020,
+        "wires": []
     },
     {
-        "id": "058e4cdcd2d9a832",
-        "type": "ui_spacer",
+        "id": "20b45fbecc08e8ff",
+        "type": "function",
         "z": "a238bb4939441ca7",
-        "name": "spacer",
+        "name": "MOV bateria",
+        "func": "if (msg.payload.action === \"data.scan\"){\n    if (msg.payload.data[0].model === \"ELA_MOV\"){\n        msg.payload = msg.payload.data[0].mfrValues.batteryVoltage;\n    } else {\n        return;\n    }\n} else {\n    return;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1320,
+        "wires": [
+            [
+                "55c7dd8957d9a6c8",
+                "6ca6576b78e51694"
+            ]
+        ]
+    },
+    {
+        "id": "55c7dd8957d9a6c8",
+        "type": "ui_text",
+        "z": "a238bb4939441ca7",
+        "group": "0deed91a4739f2bc",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "Bateria:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 860,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "6ca6576b78e51694",
+        "type": "ui_text",
+        "z": "a238bb4939441ca7",
         "group": "3265ee4350f65bb8",
         "order": 7,
         "width": 3,
-        "height": 1
+        "height": 1,
+        "name": "",
+        "label": "Bateria:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1160,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "3236f886bbd4ff68",
+        "type": "mqtt in",
+        "z": "a238bb4939441ca7",
+        "name": "",
+        "topic": "AMC/test",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "038eb83fd0c55fe9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 660,
+        "wires": [
+            [
+                "a0279382ae9ce241",
+                "eb8d92554f9d897f",
+                "ef4f0bb4f580a4ba",
+                "c832c7d4f03806b0",
+                "4f4805403d675101",
+                "c5e44805805f6601",
+                "658c4b14598ce7ab",
+                "556a8623e48a6460",
+                "316bf044fa2f70b0",
+                "b27c0b897012eb11",
+                "618ff220d1ff0c5d",
+                "0ef2c08ae5332c9e",
+                "675cea89a8dfa429",
+                "67862e71bb7f1787",
+                "517586b83eb7a79a",
+                "7e80712034bb4f1e",
+                "4cd27caec1b0b4e2",
+                "751f2c2f3b35096b",
+                "27dcd6ab1f4ef863",
+                "20b45fbecc08e8ff",
+                "82ef1e6da2f12166"
+            ]
+        ],
+        "info": "Odbiera wiadomości z tematu 'AMC/test' na serwerze MQTT.\nReceives messages from the topic 'AMC/test' on the MQTT server."
+    },
+    {
+        "id": "9df413995ebca923",
+        "type": "function",
+        "z": "a238bb4939441ca7",
+        "name": "function 12",
+        "func": "if (msg.payload.data[0].model === \"ELA_BUZZ\"){\n    msg.payload = msg.payload;\n} else {\n    return;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 920,
+        "wires": [
+            [
+                "7aaa7f4e650b3556"
+            ]
+        ]
+    },
+    {
+        "id": "7aaa7f4e650b3556",
+        "type": "debug",
+        "z": "a238bb4939441ca7",
+        "name": "debug 32",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 250,
+        "y": 1020,
+        "wires": []
     },
     {
         "id": "1abf2f54fa6f38ac",
@@ -2130,6 +2323,26 @@
         "group": "f7e4faa40edb9b35",
         "order": 1,
         "width": 17,
+        "height": 1
+    },
+    {
+        "id": "f28e926b25c76bb6",
+        "type": "ui_spacer",
+        "z": "a238bb4939441ca7",
+        "name": "spacer",
+        "group": "5159dc9ffe43f36f",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7bcd61e6c09aed3f",
+        "type": "ui_spacer",
+        "z": "a238bb4939441ca7",
+        "name": "spacer",
+        "group": "5159dc9ffe43f36f",
+        "order": 7,
+        "width": 1,
         "height": 1
     },
     {
