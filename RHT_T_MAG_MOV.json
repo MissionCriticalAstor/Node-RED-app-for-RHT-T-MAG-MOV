@@ -2280,42 +2280,6 @@
         "info": "Odbiera wiadomości z tematu 'AMC/test' na serwerze MQTT.\nReceives messages from the topic 'AMC/test' on the MQTT server."
     },
     {
-        "id": "9df413995ebca923",
-        "type": "function",
-        "z": "a238bb4939441ca7",
-        "name": "function 12",
-        "func": "if (msg.payload.data[0].model === \"ELA_BUZZ\"){\n    msg.payload = msg.payload;\n} else {\n    return;\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 160,
-        "y": 920,
-        "wires": [
-            [
-                "7aaa7f4e650b3556"
-            ]
-        ]
-    },
-    {
-        "id": "7aaa7f4e650b3556",
-        "type": "debug",
-        "z": "a238bb4939441ca7",
-        "name": "debug 32",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 250,
-        "y": 1020,
-        "wires": []
-    },
-    {
         "id": "1abf2f54fa6f38ac",
         "type": "ui_spacer",
         "z": "a238bb4939441ca7",
