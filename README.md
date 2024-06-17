@@ -1,8 +1,10 @@
 [POL]  Program, stworzony w Node-RED służący do wizualizacji danych z czujników Ela Innovation:
+
   - Blue PUCK RHT czujnik temperatury i wilgotności
   - Blue PUCK T EN12830 czujnik temperatury
   - Blue PUCK MAG czujnik magnetyczny
   - Blue PUCK MOV czujnik ruchu i drgań
+
 Dane odbierane przez MQTT są przetwarzane za pomocą węzłów funkcji i następnie wizualizowane w aplikacji node-red-dashboard.
 Wizualizacja danych jest realizowana za pomocą wykresów, które umożliwiają użytkownikowi łatwe śledzenie i analizowanie trendów.
 Aplikacja dashboard składa się ze strony głównej, gdzie znajdziemy dane z wszystkich 4 czujników oraz ze osobnych stron dla każdego z czujników.
