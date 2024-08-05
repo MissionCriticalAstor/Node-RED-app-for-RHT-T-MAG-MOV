@@ -3,7 +3,8 @@
   - Blue PUCK RHT czujnik temperatury i wilgotności
   - Blue PUCK T EN12830 czujnik temperatury
   - Blue PUCK MAG czujnik magnetyczny
-  - Blue PUCK MOV czujnik ruchu i drgań
+  - Blue PUCK MOV czujnik ruchu i drgań dla modelu MOV
+  - Blue PUCK MOV czujnik ruchu i drgań dla modelu ANG
 
 Dane odbierane przez MQTT są przetwarzane za pomocą węzłów funkcji i następnie wizualizowane w aplikacji node-red-dashboard.
 Wizualizacja danych jest realizowana za pomocą wykresów, które umożliwiają użytkownikowi łatwe śledzenie i analizowanie trendów.
@@ -17,7 +18,8 @@ Całość tworzy rozbudowany system IoT, który może być używany do monitorow
   - Blue PUCK RHT temperature and humidity sensor
   - Blue PUCK T EN12830 temperature sensor
   - Blue PUCK MAG magnetic sensor
-  - Blue PUCK MOV motion and vibration sensor
+  - Blue PUCK MOV motion and vibration sensor for MOV model
+  - Blue PUCK MOV motion and vibration sensor for ANG model
 
 Data received via MQTT is processed using function nodes and then visualized in the node-red-dashboard application.
 Data visualization is achieved through charts, allowing users to easily track and analyze trends.
